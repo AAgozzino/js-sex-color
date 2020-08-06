@@ -9,11 +9,18 @@ var sesso = prompt("Inserisci maschio o femmina");
     Se femmina stampare nome rosa
 */
 var nomeColore = document.getElementById("nome-colore")
-
-if (sesso === "maschio") {
-  nomeColore.style.color = "lightblue"
+if (!isNaN(nome) || !isNaN(sesso) || nome === null || sesso === null || nome === "" || sesso ==="") {
+  alert("Errore: inserisci nome e sesso")
+}
+else if (sesso === "maschio") {
+  // nomeColore.style.color = "lightblue";
+  nomeColore.classList.add("lblue");
+}
+else if (sesso === "femmina") {
+  // nomeColore.style.color = "pink";
+  nomeColore.classList.add("pink");
 }
 else {
-  nomeColore.style.color = "pink"
+  alert("Errore: non hai inserito il sesso")
 }
 nomeColore.innerHTML = nome
