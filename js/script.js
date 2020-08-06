@@ -14,11 +14,13 @@ if (!isNaN(nome) || !isNaN(sesso) || nome === null || sesso === null || nome ===
 }
 else if (sesso === "maschio") {
   // nomeColore.style.color = "lightblue";
-  nomeColore.classList.add("lblue");
+  // nomeColore.classList.add("lblue");
+  nomeColore.className = "lblue";
 }
 else if (sesso === "femmina") {
   // nomeColore.style.color = "pink";
-  nomeColore.classList.add("pink");
+  // nomeColore.classList.add("pink");
+  nomeColore.className = "pink";
 }
 else {
   alert("Errore: non hai inserito il sesso")
